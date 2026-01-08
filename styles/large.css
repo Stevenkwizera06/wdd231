@@ -1,0 +1,71 @@
+@media (min-width: 768px) {
+
+    /* Header & Nav */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: white;
+    }
+
+    /* Reset Heading Alignment for Desktop */
+    h2 {
+        text-align: left;
+    }
+
+    /* Layout */
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .about-me {
+        grid-column: 1 / 2;
+    }
+
+    .student-photo {
+        grid-column: 2 / 3;
+    }
+
+    .courses-section {
+        grid-column: 1 / -1;
+    }
+
+    .profile-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Course List Grid */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

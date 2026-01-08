@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 231 Course Home Page for [Your Name]. Demonstrating proficiency in HTML, CSS, and JavaScript.">
+    <meta name="author" content="[Your Name]">
+    <title>WDD 231 - Course Home Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.svg" alt="Site Logo" class="logo">
+        </a>
+        <button id="menu-button" aria-label="Toggle Menu"></button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="hero-grid">
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Welcome to my WDD 231 course home page. I am a student learning Web Development. This page serves
+                        as a portal to my projects and demonstrates my skills in HTML, CSS and JavaScript. As I
+                        progress through this course, I will be building various web applications that showcase my
+                        understanding of responsive design, accessibility and performance optimization. My goal is to
+                        become a proficient full-stack developer and this portfolio is the first step in that journey.
+                        I am excited to apply the concepts of semantic HTML, modern CSS layout techniques like Grid and
+                        Flexbox and dynamic JavaScript functionality to create engaging user experiences.</p>
+                </div>
+            </section>
+
+            <section class="card student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/wakaso.jpg" alt="Profile Photo" class="profile-img">
+            </section>
+
+            <section class="card courses-section">
+                <h2>Web Certificate Courses</h2>
+                <div class="filters">
+                    <button id="all-btn" class="filter-btn active">All</button>
+                    <button id="cse-btn" class="filter-btn">CSE</button>
+                    <button id="wdd-btn" class="filter-btn">WDD</button>
+                </div>
+                <div id="course-list" class="course-grid">
+                    <!-- Courses will be dynamically injected here -->
+                </div>
+                <div class="credits-total">
+                    Total Credits: <span id="total-credits">0</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Stevenkwizera06" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/kwizera-steven/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Kwizera Steven Rwanda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
