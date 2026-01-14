@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#003366"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#ff9900" stroke-width="4"/>
+  <rect x="70" y="80" width="60" height="50" fill="#ff9900"/>
+  <rect x="75" y="85" width="15" height="15" fill="#003366"/>
+  <rect x="95" y="85" width="15" height="15" fill="#003366"/>
+  <rect x="115" y="85" width="15" height="15" fill="#003366"/>
+  <rect x="75" y="105" width="15" height="15" fill="#003366"/>
+  <rect x="95" y="105" width="15" height="15" fill="#003366"/>
+  <rect x="115" y="105" width="15" height="15" fill="#003366"/>
+  <rect x="85" y="125" width="30" height="5" fill="#003366"/>
+  <text x="100" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff9900" text-anchor="middle">CHAMBER</text>
+</svg>
