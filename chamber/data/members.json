@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Payson Utah Temple",
+    "address": "1494 S 930 W, Payson, UT 84651",
+    "phone": "(801) 465-1896",
+    "website": "https://www.churchofjesuschrist.org/temples/details/payson-utah-temple",
+    "image": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "membershipLevel": 3,
+    "otherInfo": "Dedicated in 2015."
+  },
+  {
+    "name": "Boise Idaho Temple",
+    "address": "1211 S Cole Rd, Boise, ID 83709",
+    "phone": "(208) 322-4422",
+    "website": "https://www.churchofjesuschrist.org/temples/details/boise-idaho-temple",
+    "image": "https://assets.ldscdn.org/c6/07/c6077e1778bfdf5a91569ab3acf57e9c31a7175f/boise_idaho_temple_sunshine.jpeg",
+    "membershipLevel": 2,
+    "otherInfo": "Dedicated in 1984."
+  },
+  {
+    "name": "Oakland California Temple",
+    "address": "4770 Lincoln Ave, Oakland, CA 94602",
+    "phone": "(510) 531-3200",
+    "website": "https://www.churchofjesuschrist.org/temples/details/oakland-california-temple",
+    "image": "https://assets.ldscdn.org/83/16/831688ef82fcab202e941ed8fd5869b28f9b5db11086883/oakland_california_temple_exterior.jpeg",
+    "membershipLevel": 1,
+    "otherInfo": "Dedicated in 1964."
+  },
+  {
+    "name": "Seattle Washington Temple",
+    "address": "2808 148th Ave SE, Bellevue, WA 98007",
+    "phone": "(425) 747-4144",
+    "website": "https://www.churchofjesuschrist.org/temples/details/seattle-washington-temple",
+    "image": "https://assets.ldscdn.org/72/14/7214efb047426ffe6b581906fa0092a624ebc637/seattle_washington_temple_exterior.jpg",
+    "membershipLevel": 3,
+    "otherInfo": "Dedicated in 1980."
+  },
+  {
+    "name": "Portland Oregon Temple",
+    "address": "13600 SW Kruger Rd, Lake Oswego, OR 97035",
+    "phone": "(503) 636-6288",
+    "website": "https://www.churchofjesuschrist.org/temples/details/portland-oregon-temple",
+    "image": "https://assets.ldscdn.org/2c/77/2c77d5fd39c0646e0122b1a1472f1d538aa3aa7e/portland_oregon_temple.jpeg",
+    "membershipLevel": 2,
+    "otherInfo": "Dedicated in 1989."
+  },
+  {
+    "name": "Jordan River Utah Temple",
+    "address": "10200 S Temple Dr, South Jordan, UT 84095",
+    "phone": "(801) 254-3003",
+    "website": "https://www.churchofjesuschrist.org/temples/details/jordan-river-utah-temple",
+    "image": "https://assets.ldscdn.org/e5/54/e5546a3599c023ba83a4d751fb6fc196b5ab6ada/jordan_river_temple_exterior_images.jpeg",
+    "membershipLevel": 1,
+    "otherInfo": "Dedicated in 1981."
+  },
+  {
+    "name": "Provo Utah Temple",
+    "address": "2200 Temple Hill Dr, Provo, UT 84604",
+    "phone": "(801) 375-5775",
+    "website": "https://www.churchofjesuschrist.org/temples/details/provo-utah-temple",
+    "image": "https://assets.ldscdn.org/77/eb/77eb82391ad1795a117b25ee3deaf2a4d229311a/provo_temple_lds.jpg",
+    "membershipLevel": 2,
+    "otherInfo": "Dedicated in 1972."
+  },
+  {
+    "name": "Provo City Center Temple",
+    "address": "50 S University Ave, Provo, UT 84601",
+    "phone": "(801) 343-2700",
+    "website": "https://www.churchofjesuschrist.org/temples/details/provo-city-center-temple",
+    "image": "https://assets.ldscdn.org/57/18/5718c8b9c5a103646c0bd22554cb268b88986f05/provo_city_center_temple_exterior.jpg",
+    "membershipLevel": 3,
+    "otherInfo": "Dedicated in 2016."
+  }
+]
