@@ -80,6 +80,18 @@ nav a.active {
     border-bottom: 2px solid #000;
 }
 
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
@@ -296,5 +308,3 @@ footer {
         gap: 0.5rem;
     }
 }
-
-```
