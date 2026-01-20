@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Timbuktu Chamber of Commerce Directory - Find local businesses and services.">
-    <meta name="author" content="Student Name"> <!-- Replace with actual name if known, using generic for now -->
+    <meta name="description" content="Timbuktu Chamber of Commerce Home Page - Connecting businesses and community.">
+    <meta name="author" content="Student Name">
 
-    <title>Chamber Directory - Timbuktu Chamber of Commerce</title>
+    <title>Timbuktu Chamber of Commerce - Home</title>
 
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
-    <meta property="og:description" content="Discover local businesses in Timbuktu. Join our network today!">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:description" content="Join the Timbuktu Chamber of Commerce. Business, Community, Growth.">
     <meta property="og:image" content="https://Stevenkwizera06.github.io/wdd231/chamber/images/logo.svg">
-    <meta property="og:url" content="https://Stevenkwizera06.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://Stevenkwizera06.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
@@ -27,9 +27,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
 
     <!-- Scripts -->
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
@@ -42,26 +43,56 @@
         <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Chamber Directory</h1>
-        <h2>Member Directory</h2>
-
-        <div class="menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
+    <main class="home-grid">
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 600px)"
+                    srcset="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <!-- Mobile Image -->
+                <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Chamber of Commerce Hero Image">
+            </picture>
+            <div class="hero-overlay">
+                <h1>Welcome to Timbuktu Chamber</h1>
+                <p>Building a stronger community together.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
         </div>
 
-        <article id="members" class="grid">
-            <!-- Members will be injected here by JavaScript -->
-        </article>
+        <section class="events-card">
+            <h3>Current Events</h3>
+            <div id="events-container">
+                <p>Annual Business Expo - Oct 25th</p>
+                <p>Networking Night - Nov 12th</p>
+                <p>Holiday Charity Drive - Dec 5th</p>
+            </div>
+        </section>
+
+        <section class="weather-card">
+            <h3>Current Weather</h3>
+            <div id="weather-info">
+                <p>Loading weather...</p>
+            </div>
+            <div id="forecast-info">
+                <!-- 3 Day Forecast -->
+            </div>
+        </section>
+
+        <section class="spotlight-card">
+            <h3>Member Spotlight</h3>
+            <div id="spotlight-container">
+                <!-- Spotlights injected by JS -->
+                <p>Loading members...</p>
+            </div>
+        </section>
     </main>
 
     <footer>

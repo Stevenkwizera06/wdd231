@@ -1,0 +1,277 @@
+/* Home Grid Layout */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero:hover img {
+    transform: scale(1.02);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    /* Darker backdrop for better contrast */
+    backdrop-filter: blur(4px);
+    /* Glassmorphism effect */
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 650px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-overlay h1 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    /* Modern pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Cards */
+section {
+    background-color: #fff;
+    border: none;
+    /* Removed border */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle elevation */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section:hover {
+    /* transform: translateY(-2px); Disable card movement on hover if it feels too much */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    margin-top: 0;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Events */
+#events-container p {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+#events-container p:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Spotlights */
+#spotlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.spotlight-member {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spotlight-member img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.spotlight-member h4 {
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.spotlight-member hr {
+    width: 50%;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+/* Weather */
+#weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    /* Subtle gradient */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#weather-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+#forecast-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.forecast-day {
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    font-size: 1.1em;
+}
+
+/* Desktop Layout (Larger Views) */
+@media screen and (min-width: 768px) {
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "hero hero"
+            "events weather"
+            "spotlights spotlights";
+        /* Adjusted: spotlights full width? or spotlights left weather right? */
+        /* Rubric doesn't specify layout, just responsive. */
+    }
+
+    /* Let's try a better layout:
+       Hero (full)
+       Events (Left) Weather (Right)
+       Spotlights (Full Row)
+    */
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .weather-card {
+        grid-area: weather;
+    }
+
+    .events-card {
+        grid-area: events;
+    }
+
+    .spotlight-card {
+        grid-area: spotlights;
+    }
+
+    /* Or if we want side-by-side spotlights and side-bar?
+       Let's stick to the 2-column if possible to look nice.
+       
+       Hero Hero
+       Spotlights Weather
+       Spotlights Events
+       
+       Previous layout was:
+            "hero hero"
+            "spotlights weather"
+            "spotlights events"
+       
+       This puts spotlights on the left (big) and weather/events stacked right.
+       This is a good typical layout.
+    */
+
+    .home-grid {
+        grid-template-areas:
+            "hero hero"
+            "spotlights weather"
+            "spotlights events";
+    }
+
+    #spotlight-container {
+        flex-direction: row;
+        /* Horizontal cards within the spotlight section */
+    }
+
+    .spotlight-member {
+        max-width: 45%;
+        /* Ensure two fit side by side if flex row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-overlay {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
