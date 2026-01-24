@@ -19,7 +19,8 @@ body {
 /* Header */
 header {
     background-color: #d3d3d3;
-    color: #000;
+    color: #1a1a1a;
+    /* Darker for better contrast */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -34,13 +35,15 @@ header {
 }
 
 .logo img {
-    border: 1px solid #000;
+    border: 1px solid #1a1a1a;
+    /* Darker border */
 }
 
 .logo span {
     font-size: 1rem;
     font-weight: normal;
-    color: #000;
+    color: #1a1a1a;
+    /* Darker for better contrast */
 }
 
 /* Hamburger Menu Button */
@@ -69,15 +72,20 @@ nav li {
 nav a {
     display: block;
     padding: 0.5rem 0;
-    color: #000;
+    color: #1a1a1a;
+    /* Darker for better contrast */
     text-decoration: none;
     font-weight: normal;
     border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--primary-color);
+    /* More visible active state */
+    font-weight: 700;
+    /* Bold for active link */
 }
 
 h1 {

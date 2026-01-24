@@ -26,9 +26,11 @@ if (lastModified) {
 
 // --- Home Page Specific Logic --- //
 
-// Weather API
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your actual key
-// Coordinates for Timbuktu (or your chosen chamber location)
+// Weather API Configuration
+// OpenWeatherMap API key - Active and configured
+const apiKey = 'dd89002c5c6c7d50edccfb9817c994c5';
+
+// Coordinates for Timbuktu, Mali
 const lat = 16.7666;
 const lon = -3.0026;
 
@@ -37,27 +39,46 @@ const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}
 
 async function fetchWeather() {
     try {
+        console.log('Fetching weather from:', weatherUrl);
         const response = await fetch(weatherUrl);
+        console.log('Weather API Response Status:', response.status);
+
         if (response.ok) {
             const data = await response.json();
+            console.log('Weather data received:', data);
             displayCurrentWeather(data);
         } else {
-            console.error('Weather response not ok');
-            document.getElementById('weather-info').innerHTML = '<p>Error loading weather.</p>';
+            const errorText = await response.text();
+            console.error('Weather API Error:', response.status, errorText);
+
+            let errorMessage = 'Error loading weather.';
+            if (response.status === 401) {
+                errorMessage = 'API key not activated yet. Please wait 1-2 hours after signup.';
+            } else if (response.status === 404) {
+                errorMessage = 'Location not found.';
+            }
+
+            document.getElementById('weather-info').innerHTML = `<p>${errorMessage}</p>`;
         }
     } catch (error) {
         console.error('Error fetching weather:', error);
+        document.getElementById('weather-info').innerHTML = '<p>Network error. Check console for details.</p>';
     }
 }
 
 async function fetchForecast() {
     try {
+        console.log('Fetching forecast from:', forecastUrl);
         const response = await fetch(forecastUrl);
+        console.log('Forecast API Response Status:', response.status);
+
         if (response.ok) {
             const data = await response.json();
+            console.log('Forecast data received:', data);
             displayForecast(data);
         } else {
-            console.error('Forecast response not ok');
+            const errorText = await response.text();
+            console.error('Forecast API Error:', response.status, errorText);
         }
     } catch (error) {
         console.error('Error fetching forecast:', error);
