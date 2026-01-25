@@ -51,14 +51,16 @@ async function fetchWeather() {
             const errorText = await response.text();
             console.error('Weather API Error:', response.status, errorText);
 
-            let errorMessage = 'Error loading weather.';
+            let errorMessage = `Error loading weather. Status: ${response.status}`;
             if (response.status === 401) {
-                errorMessage = 'API key not activated yet. Please wait 1-2 hours after signup.';
+                errorMessage = 'API Key Error: Unauthorized. Check if key is activated or if domain restrictions block it.';
             } else if (response.status === 404) {
                 errorMessage = 'Location not found.';
+            } else if (response.status === 429) {
+                errorMessage = 'Too many requests. API limit reached.';
             }
 
-            document.getElementById('weather-info').innerHTML = `<p>${errorMessage}</p>`;
+            document.getElementById('weather-info').innerHTML = `<p>${errorMessage}</p><p style="font-size: 0.8em; color: red;">${errorText.slice(0, 50)}</p>`;
         }
     } catch (error) {
         console.error('Error fetching weather:', error);
