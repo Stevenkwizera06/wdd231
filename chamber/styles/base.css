@@ -219,7 +219,8 @@ footer {
     text-align: left;
 }
 
-.contact-info h3 {
+.contact-info h3,
+.contact-info h2 {
     margin-top: 0;
     border-bottom: 2px solid var(--accent-color);
     display: inline-block;
