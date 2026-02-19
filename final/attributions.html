@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributions — WorldScope</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .attributions {
+            padding: 40px 0;
+            line-height: 1.8;
+        }
+
+        .attributions h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .attributions ul {
+            margin-bottom: 20px;
+        }
+
+        .attributions li {
+            margin-bottom: 10px;
+        }
+
+        .attributions a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌍</span> WorldScope</a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Resource <span class="gradient-text">Attributions</span></h1>
+            <p>Credits for external assets and data used in this project</p>
+        </div>
+
+        <div class="container">
+            <div class="attributions">
+                <h2>Data API</h2>
+                <ul>
+                    <li><strong>REST Countries API:</strong> Provided by <a href="https://restcountries.com/"
+                            target="_blank">restcountries.com</a>. Used for all country data, flags, and statistical
+                        information.</li>
+                </ul>
+
+                <h2>Images</h2>
+                <ul>
+                    <li><strong>Hero Background & About Image:</strong> High-quality photography from <a
+                            href="https://unsplash.com/" target="_blank">Unsplash</a>.</li>
+                    <li><strong>Country Flags:</strong> Sourced dynamically via the REST Countries API.</li>
+                </ul>
+
+                <h2>Typography</h2>
+                <ul>
+                    <li><strong>Inter & Outfit Fonts:</strong> Provided via <a href="https://fonts.google.com/"
+                            target="_blank">Google Fonts</a>.</li>
+                </ul>
+
+                <h2>Tools & Guidance</h2>
+                <ul>
+                    <li><strong>Course Materials:</strong> WDD 231 Web Frontend Development II, BYU-Idaho.</li>
+                    <li><strong>Icons:</strong> Emoji icons used for branding and badges (SVG Data URL).</li>
+                </ul>
+
+                <div style="margin-top: 50px; text-align: center;">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 WorldScope | Steven Kwizera | WDD 231</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

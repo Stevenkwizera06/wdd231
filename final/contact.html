@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — WorldScope</title>
+    <meta name="description"
+        content="Get in touch with WorldScope. Share your feedback, suggest countries to feature, or ask about our explorer platform.">
+    <meta name="author" content="Steven Kwizera">
+    <meta property="og:title" content="Contact — WorldScope">
+    <meta property="og:description" content="Reach out to the WorldScope team with your questions and suggestions.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌍</span> WorldScope</a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Get in <span class="gradient-text">Touch</span></h1>
+            <p>We'd love to hear from you. Share your thoughts and explore with us.</p>
+        </div>
+
+        <div class="container">
+            <div class="about-grid" style="margin-bottom:60px;">
+                <div class="about-text">
+                    <h2>About WorldScope</h2>
+                    <p>WorldScope is an interactive country explorer built to help people discover the richness and
+                        diversity of nations across the globe. From flags and capitals to languages and populations, we
+                        bring the world to your fingertips.</p>
+                    <p>Whether you're a student, traveler, or simply curious about the world, WorldScope provides a
+                        clean and intuitive interface to browse and learn.</p>
+                    <ul class="feature-list">
+                        <li>Explore 250+ countries with detailed data</li>
+                        <li>Filter by region, search by name</li>
+                        <li>Save your favorite countries locally</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Built with vanilla HTML, CSS, and JavaScript</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=600&h=400&fit=crop"
+                        alt="World map with pins showing global exploration" loading="lazy" width="600" height="400">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you</p>
+                </div>
+                <form id="contact-form" action="thankyou.html" method="GET">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first" required minlength="2" placeholder="John"
+                                autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last" required minlength="2" placeholder="Doe"
+                                autocomplete="family-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com"
+                            autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="suggestion">Country Suggestion</option>
+                            <option value="bug">Bug Report</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fav-region">Favorite Region</label>
+                        <select id="fav-region" name="region">
+                            <option value="">Select a region...</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Americas">Americas</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required minlength="10"
+                            placeholder="Tell us what's on your mind..."></textarea>
+                    </div>
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send
+                        Message →</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo"><span class="logo-icon">🌍</span> WorldScope</div>
+                    <p>Your gateway to exploring countries around the globe.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="attributions.html">Attributions</a></li>
+                        <li><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" rel="noopener">Video Demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> WorldScope | Steven Kwizera | WDD 231</p>
+                <p>Last Modified: <span id="lastmod"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/contact.js"></script>
+</body>
+
+</html>

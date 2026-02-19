@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Countries — WorldScope</title>
+    <meta name="description"
+        content="Browse, search, and filter all countries in the world. View flags, populations, capitals, languages and more.">
+    <meta name="author" content="Steven Kwizera">
+    <meta property="og:title" content="Explore Countries — WorldScope">
+    <meta property="og:description"
+        content="Browse and filter 250+ countries with detailed stats, flags, and interactive cards.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌍</span> WorldScope</a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html" class="active">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Explore <span class="gradient-text">Countries</span></h1>
+            <p>Search, filter, and discover countries from all regions</p>
+        </div>
+
+        <div class="container">
+            <div id="visit-banner" class="visit-banner" style="display:none;"></div>
+
+            <div id="favorites-section" class="favorites-section" style="display:none;">
+                <h3>⭐ Your Saved Countries</h3>
+                <div class="countries-grid" id="favorites-grid"></div>
+            </div>
+
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Search countries..."
+                        aria-label="Search countries">
+                </div>
+                <select class="filter-select" id="region-filter" aria-label="Filter by region">
+                    <option value="">All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <div class="sort-btns">
+                    <button class="sort-btn active" data-sort="name" id="sort-name">A–Z</button>
+                    <button class="sort-btn" data-sort="population" id="sort-pop">Population</button>
+                    <button class="sort-btn" data-sort="area" id="sort-area">Area</button>
+                </div>
+            </div>
+
+            <p id="results-count" style="color:var(--text-muted); font-size:0.88rem; margin-bottom:20px;"></p>
+
+            <div class="countries-grid" id="countries-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo"><span class="logo-icon">🌍</span> WorldScope</div>
+                    <p>Your gateway to exploring countries around the globe.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="attributions.html">Attributions</a></li>
+                        <li><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" rel="noopener">Video Demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> WorldScope | Steven Kwizera | WDD 231</p>
+                <p>Last Modified: <span id="lastmod"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <img id="modal-flag" src="" alt="Country flag" loading="lazy">
+                <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-details" id="modal-details"></div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modal-fav-btn">⭐ Save to Favorites</button>
+                    <button class="btn btn-secondary" id="modal-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/explore.js"></script>
+</body>
+
+</html>

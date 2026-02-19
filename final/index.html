@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldScope — Explore Countries Around the Globe</title>
+    <meta name="description"
+        content="WorldScope is your gateway to exploring countries worldwide. Discover flags, populations, languages, and more with our interactive country explorer.">
+    <meta name="author" content="Steven Kwizera">
+    <meta property="og:title" content="WorldScope — Country Explorer">
+    <meta property="og:description"
+        content="Explore countries around the globe with interactive maps, flags, and detailed country information.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://restcountries.com/v3.1/data/rwa.svg">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌍</span>
+                WorldScope
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">🌐 Discover 250+ Countries</div>
+                <h1>Explore the <span class="gradient-text">World</span> Like Never Before</h1>
+                <p>Dive into flags, cultures, languages, and populations from every corner of the globe. Your journey
+                    starts here.</p>
+                <div class="btn-group">
+                    <a href="explore.html" class="btn btn-primary">Start Exploring →</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="container">
+                <div class="stats-bar fade-in" id="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-countries">—</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-population">—</div>
+                        <div class="stat-label">World Population</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-languages">—</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-regions">—</div>
+                        <div class="stat-label">Regions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Countries</h2>
+                    <p>Explore some of the most fascinating countries from around the world</p>
+                </div>
+                <div id="visit-banner" class="visit-banner" style="display:none;"></div>
+                <div class="countries-grid" id="featured-countries">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo"><span class="logo-icon">🌍</span> WorldScope</div>
+                    <p>Your gateway to exploring countries around the globe. Built with passion for geography and
+                        culture.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="attributions.html">Attributions</a></li>
+                        <li><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" rel="noopener">Video Demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> WorldScope | Steven Kwizera | WDD 231</p>
+                <p>Last Modified: <span id="lastmod"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <img id="modal-flag" src="" alt="Country flag" loading="lazy">
+                <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-details" id="modal-details"></div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modal-fav-btn">⭐ Save to Favorites</button>
+                    <button class="btn btn-secondary" id="modal-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/home.js"></script>
+</body>
+
+</html>

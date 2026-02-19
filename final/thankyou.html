@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You — WorldScope</title>
+    <meta name="description" content="Your message has been received. Thank you for contacting WorldScope.">
+    <meta name="author" content="Steven Kwizera">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌍</span> WorldScope</a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="thankyou-container">
+            <div class="thankyou-card fade-in">
+                <div class="thankyou-icon">✅</div>
+                <h1>Thank You!</h1>
+                <p>Your message has been received. Here's a summary of your submission:</p>
+                <div class="submission-data" id="submission-data"></div>
+                <a href="index.html" class="btn btn-primary">← Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> WorldScope | Steven Kwizera | WDD 231</p>
+                <p>Last Modified: <span id="lastmod"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/thankyou.js"></script>
+</body>
+
+</html>
